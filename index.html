@@ -585,14 +585,15 @@ footer a:hover { color: var(--sky); }
 <nav>
   <div class="nav-brand">✈️ Mithil's Cockpit Roadmap</div>
   <div class="nav-links">
-    <span class="nav-link" onclick="scrollTo('#routes')">Routes</span>
-    <span class="nav-link" onclick="scrollTo('#schools')">Schools</span>
-    <span class="nav-link" onclick="scrollTo('#abroad')">Abroad</span>
-    <span class="nav-link" onclick="scrollTo('#costs')">Costs</span>
-    <span class="nav-link" onclick="scrollTo('#loans')">Loans</span>
-    <span class="nav-link" onclick="scrollTo('#surat')">BSc Surat</span>
-    <span class="nav-link" onclick="scrollTo('#summer')">Summer Plan</span>
-    <span class="nav-link" onclick="scrollTo('#homework')">Homework</span>
+    <span class="nav-link" onclick="gotoSection('#decision')">Decision</span>
+    <span class="nav-link" onclick="gotoSection('#routes')">Routes</span>
+    <span class="nav-link" onclick="gotoSection('#schools')">Schools</span>
+    <span class="nav-link" onclick="gotoSection('#abroad')">Abroad</span>
+    <span class="nav-link" onclick="gotoSection('#costs')">Costs</span>
+    <span class="nav-link" onclick="gotoSection('#loans')">Loans</span>
+    <span class="nav-link" onclick="gotoSection('#surat')">BSc Surat</span>
+    <span class="nav-link" onclick="gotoSection('#summer')">Summer Plan</span>
+    <span class="nav-link" onclick="gotoSection('#homework')">Homework</span>
   </div>
 </nav>
 
@@ -603,10 +604,16 @@ footer a:hover { color: var(--sky); }
   <h1>Hey <em>Mithil</em>,<br>The <span>Cockpit</span> is Waiting For You</h1>
   <p class="hero-sub">A complete, research-backed guide to becoming a Commercial Pilot — your three routes, schools, costs, loans, and the summer plan to become the best version of yourself.</p>
   <div class="hero-cta">
-    <button class="btn-primary" onclick="scrollTo('#routes')">Explore CPL Routes →</button>
-    <button class="btn-secondary" onclick="scrollTo('#homework')">📋 My Homework Checklist</button>
+    <button class="btn-primary" onclick="gotoSection('#routes')">Explore CPL Routes →</button>
+    <button class="btn-secondary" onclick="gotoSection('#homework')">📋 My Homework Checklist</button>
   </div>
-  <div class="scroll-hint">▼ SCROLL TO EXPLORE ▼</div>
+  
+  <!-- Hero illustration image -->
+  <div style="position:relative;z-index:2;margin-top:48px;max-width:860px;width:100%;margin-left:auto;margin-right:auto;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.5);border:1px solid rgba(0,180,216,0.2);">
+    <img src="./generated-image.jpg" alt="Young Indian pilot looking up at a commercial jet taking off at golden hour — Mithil's future" width="860" height="400" loading="lazy" style="width:100%;height:auto;display:block;object-fit:cover;max-height:420px;" onerror="this.parentElement.style.display='none'"/>
+  </div>
+
+  <div class="scroll-hint" style="position:relative;">▼ SCROLL TO EXPLORE ▼</div>
 </section>
 
 <div class="container">
@@ -685,6 +692,56 @@ footer a:hover { color: var(--sky); }
     <div class="good-news">
       💡 <strong>Good news, Mithil!</strong> DGCA is in the process of making Physics/Maths non-compulsory. But pursuing BSc Physics or Maths puts you in the <strong>strongest possible position</strong>. You are perfectly on track! ✔️ Don't stress about 12th board results — they don't directly affect CPL eligibility as long as you've passed.
     </div>
+  </div>
+
+
+  <!-- ======= DECISION FLOW ======= -->
+  <div class="section-title" id="decision">
+    <span class="icon-badge">🧭</span>
+    Decision Flow — What to Do Right Now, Step by Step
+  </div>
+  <div style="display:grid;gap:14px;margin-bottom:40px;">
+
+    <div style="display:flex;gap:16px;background:var(--card-bg);border:1px solid var(--card-border);border-left:3px solid var(--sky);border-radius:var(--radius);padding:18px 22px;align-items:flex-start;backdrop-filter:blur(8px);">
+      <div style="background:linear-gradient(135deg,var(--sky),#0077a8);color:#fff;font-weight:900;font-size:1.3em;border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+      <div>
+        <strong style="color:var(--sky);font-size:1em;display:block;margin-bottom:4px;">Wait for result calmly</strong>
+        <p style="font-size:0.88em;color:#a0bfd4;margin:0;">Do not panic before marks are declared. First check pass/fail status, subject-wise score, and whether improvement or re-appearance is needed.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:16px;background:var(--card-bg);border:1px solid var(--card-border);border-left:3px solid var(--gold);border-radius:var(--radius);padding:18px 22px;align-items:flex-start;backdrop-filter:blur(8px);">
+      <div style="background:linear-gradient(135deg,var(--gold),#c27a00);color:#fff;font-weight:900;font-size:1.3em;border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+      <div>
+        <strong style="color:var(--gold-light);font-size:1em;display:block;margin-bottom:4px;">Secure the academic base</strong>
+        <p style="font-size:0.88em;color:#a0bfd4;margin:0;">If required, fix Physics/Maths eligibility quickly. At the same time, shortlist BSc options in Surat so the graduation path stays active.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:16px;background:var(--card-bg);border:1px solid var(--card-border);border-left:3px solid #22c55e;border-radius:var(--radius);padding:18px 22px;align-items:flex-start;backdrop-filter:blur(8px);">
+      <div style="background:linear-gradient(135deg,#22c55e,#15803d);color:#fff;font-weight:900;font-size:1.3em;border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+      <div>
+        <strong style="color:#86efac;font-size:1em;display:block;margin-bottom:4px;">Compare all three pilot routes</strong>
+        <p style="font-size:0.88em;color:#a0bfd4;margin:0;">Look at selection difficulty, cost, total duration, training hours, loan possibility, medical standards, and conversion complexity.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:16px;background:var(--card-bg);border:1px solid var(--card-border);border-left:3px solid #f87171;border-radius:var(--radius);padding:18px 22px;align-items:flex-start;backdrop-filter:blur(8px);">
+      <div style="background:linear-gradient(135deg,#ef4444,#b91c1c);color:#fff;font-weight:900;font-size:1.3em;border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</div>
+      <div>
+        <strong style="color:#fca5a5;font-size:1em;display:block;margin-bottom:4px;">Do Class 2 and then Class 1 medical planning</strong>
+        <p style="font-size:0.88em;color:#a0bfd4;margin:0;">A pilot path becomes real only when medical eligibility is workable. This should happen early, not after spending money blindly.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:16px;background:var(--card-bg);border:1px solid var(--card-border);border-left:3px solid #a78bfa;border-radius:var(--radius);padding:18px 22px;align-items:flex-start;backdrop-filter:blur(8px);">
+      <div style="background:linear-gradient(135deg,#7c3aed,#4c1d95);color:#fff;font-weight:900;font-size:1.3em;border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</div>
+      <div>
+        <strong style="color:#c4b5fd;font-size:1em;display:block;margin-bottom:4px;">Start building discipline</strong>
+        <p style="font-size:0.88em;color:#a0bfd4;margin:0;">Use the summer for confidence, communication, independence, and research, not only for screen time.</p>
+      </div>
+    </div>
+
   </div>
 
   <!-- ======= 3 ROUTES ======= -->
@@ -1035,7 +1092,61 @@ footer a:hover { color: var(--sky); }
       <div class="cost-note">Globally respected, higher cost</div>
     </div>
   </div>
-  <p style="font-size:0.8em; color:var(--muted); margin-top:8px;">* All figures are approximate 2025–26 estimates. For abroad routes add ₹5–12 L for DGCA licence conversion. Type Rating (A320/B737) costs ₹10–18 L separately if not included. Figures exclude Type Rating unless stated.</p>
+  <p style="font-size:0.8em; color:var(--muted); margin-top:8px;">
+  <!-- Enhanced planning cost table from Kushal Mama -->
+  <div style="overflow-x:auto;margin:28px 0 8px;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.88em;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;">
+      <thead>
+        <tr style="background:rgba(0,180,216,0.12);">
+          <th style="padding:12px 16px;text-align:left;color:var(--sky-light);font-weight:700;border-bottom:1px solid var(--card-border);">Route</th>
+          <th style="padding:12px 16px;text-align:left;color:var(--sky-light);font-weight:700;border-bottom:1px solid var(--card-border);">Typical Planning Range</th>
+          <th style="padding:12px 16px;text-align:left;color:var(--sky-light);font-weight:700;border-bottom:1px solid var(--card-border);">Training Idea</th>
+          <th style="padding:12px 16px;text-align:left;color:var(--sky-light);font-weight:700;border-bottom:1px solid var(--card-border);">Main Advantage</th>
+          <th style="padding:12px 16px;text-align:left;color:var(--sky-light);font-weight:700;border-bottom:1px solid var(--card-border);">Main Caution</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+          <td style="padding:11px 16px;color:var(--gold-light);font-weight:800;">🏆 Cadet Programme</td>
+          <td style="padding:11px 16px;color:var(--white);font-weight:700;">₹85 L – ₹1.2 Cr+</td>
+          <td style="padding:11px 16px;color:#a0bfd4;">Airline-linked, selection-based, structured phases</td>
+          <td style="padding:11px 16px;color:#86efac;">Guided pathway and brand visibility</td>
+          <td style="padding:11px 16px;color:#fca5a5;">High entry competition and financing pressure</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);background:rgba(0,180,216,0.03);">
+          <td style="padding:11px 16px;color:var(--sky-light);font-weight:800;">🇮🇳 India CPL</td>
+          <td style="padding:11px 16px;color:var(--white);font-weight:700;">₹45 L – ₹70 L+</td>
+          <td style="padding:11px 16px;color:#a0bfd4;">Ground school + flying hours + DGCA exams</td>
+          <td style="padding:11px 16px;color:#86efac;">Indian licence path is direct</td>
+          <td style="padding:11px 16px;color:#fca5a5;">Aircraft/weather scheduling can affect timeline</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+          <td style="padding:11px 16px;color:#93c5fd;font-weight:800;">🇺🇸 USA Route</td>
+          <td style="padding:11px 16px;color:var(--white);font-weight:700;">₹65 L – ₹95 L+ <span style="font-size:0.8em;color:var(--muted);">incl. living & conversion</span></td>
+          <td style="padding:11px 16px;color:#a0bfd4;">Fast flying environment at some schools</td>
+          <td style="padding:11px 16px;color:#86efac;">Often strong aircraft utilisation</td>
+          <td style="padding:11px 16px;color:#fca5a5;">Need visa planning and DGCA conversion strategy</td>
+        </tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);background:rgba(0,180,216,0.03);">
+          <td style="padding:11px 16px;color:#6ee7b7;font-weight:800;">🇿🇦 South Africa Route</td>
+          <td style="padding:11px 16px;color:var(--white);font-weight:700;">₹55 L – ₹85 L+ <span style="font-size:0.8em;color:var(--muted);">incl. travel & conversion</span></td>
+          <td style="padding:11px 16px;color:#a0bfd4;">Popular with Indian students for training weather</td>
+          <td style="padding:11px 16px;color:#86efac;">Cost-effective vs Western routes</td>
+          <td style="padding:11px 16px;color:#fca5a5;">Check visa, safety, and licence conversion carefully</td>
+        </tr>
+        <tr>
+          <td style="padding:11px 16px;color:#c4b5fd;font-weight:800;">🇪🇺 Europe / UK Route</td>
+          <td style="padding:11px 16px;color:var(--white);font-weight:700;">₹90 L – ₹1.5 Cr+</td>
+          <td style="padding:11px 16px;color:#a0bfd4;">Premium training ecosystem</td>
+          <td style="padding:11px 16px;color:#86efac;">Strong academy brands</td>
+          <td style="padding:11px 16px;color:#fca5a5;">Most expensive option in many cases</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:0.78em;color:var(--muted);margin-top:6px;">⚠️ Figures are planning ranges only. Real costs change with fuel price, aircraft availability, currency, hostel, simulator use, exam attempts, and conversion requirements.</p>
+
+  <p style="font-size:0.8em; color:var(--muted); margin-top:4px;">* All figures are approximate 2025–26 estimates. For abroad routes add ₹5–12 L for DGCA licence conversion. Type Rating (A320/B737) costs ₹10–18 L separately if not included. Figures exclude Type Rating unless stated.</p>
 
   <!-- ======= EDUCATION LOANS ======= -->
   <div class="section-title" id="loans">
@@ -1216,9 +1327,15 @@ footer a:hover { color: var(--sky); }
   <!-- ======= SUMMER TASKS ======= -->
   <div class="section-title" id="summer">
     <span class="icon-badge">🌱</span>
-    Your Summer Growth Plan — 4 Tasks This Summer
+    Your Summer Growth Plan — 5 Tasks This Summer
   </div>
-  <p style="color:var(--muted); margin-bottom:20px; font-size:0.94em;">Becoming a pilot is not just about flying hours and exams — it's about <strong style="color:var(--white);">becoming the right kind of person</strong>. A pilot must be confident, unflappable, detail-oriented, and comfortable with pressure. Here is your summer mission:</p>
+  <p style="color:var(--muted); margin-bottom:20px; font-size:0.94em;">Becoming a pilot is not just about flying hours and exams — it's about <strong style="color:var(--white);">becoming the right kind of person</strong>. A pilot must be confident, unflappable, detail-oriented, and comfortable with pressure. Here is your summer mission — <strong style="color:var(--white);">5 tasks that will shape you into the pilot Surat deserves:</strong></p>
+
+
+  <!-- Summer illustration image -->
+  <div style="margin:0 0 28px;border-radius:18px;overflow:hidden;box-shadow:0 16px 56px rgba(0,0,0,0.45);border:1px solid rgba(244,162,40,0.2);max-height:480px;">
+    <img src="./generated-image.jpg" alt="Mithil's summer: working in Surat shop, solo train travel, and researching pilot schools on a laptop" width="1060" height="480" loading="lazy" style="width:100%;height:auto;display:block;object-fit:cover;max-height:480px;" onerror="this.parentElement.style.display='none'"/>
+  </div>
 
   <div class="summer-grid">
     <div class="summer-card">
@@ -1236,7 +1353,10 @@ footer a:hover { color: var(--sky); }
     </div>
     <div class="summer-card">
       <img
-        src="https://images.unsplash.com/photo-1567703665436-cad2e50a6547?w=800&q=80"
+        src="./summer-railway-task2.png"
+        loading="lazy"
+        width="800"
+        height="360"
         alt="Indian railway train journey"
         class="summer-img"
         onerror="this.style.background='linear-gradient(135deg, #78350f, #d97706)'; this.style.height='180px'; this.removeAttribute('src');"
@@ -1249,7 +1369,7 @@ footer a:hover { color: var(--sky); }
     </div>
     <div class="summer-card">
       <img
-        src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+        src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/c475ff3f-1d8c-449a-b820-036246d1d1d7.png"
         alt="Airplane cockpit pilot flying"
         class="summer-img"
         onerror="this.style.background='linear-gradient(135deg, #14532d, #22c55e)'; this.style.height='180px'; this.removeAttribute('src');"
@@ -1273,6 +1393,31 @@ footer a:hover { color: var(--sky); }
         <p>Aviation runs entirely on English. ATC communications, DGCA exams, flight manuals, airline interviews — all in English. This summer: watch English news for 20 minutes daily (BBC, CNN), listen to aviation podcasts (FlightCast, ATC audio on YouTube), and speak English at home every day for practice. ICAO Level 4 English is required for your CPL licence. Start building this habit NOW — it will be the difference between passing your licence test or failing it.</p>
       </div>
     </div>
+
+    <div class="summer-card">
+      <img
+        src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/dae005e1-654d-44be-90d6-49923d26766b.png"
+        alt="Mithil doing gym, swimming and yoga for physical fitness — CPL medical preparation"
+        class="summer-img"
+        loading="lazy"
+        width="800" height="360"
+        onerror="this.style.background='linear-gradient(135deg, #14532d, #22c55e)'; this.style.height='180px'; this.removeAttribute('src');"
+      />
+      <div class="summer-body">
+        <div class="summer-num">5</div>
+        <h3>💪 Task 5: Build Physical Fitness — Gym, Swimming or Yoga</h3>
+        <p>A CPL pilot must pass a <strong>DGCA Class 1 Medical</strong> that checks vision, cardiovascular fitness, blood pressure, lung capacity, and mental health. This is not optional — it is the <strong>most important gate</strong> on your entire pilot journey. Start your body right now:</p>
+        <ul style="margin:10px 0 0 0;padding-left:0;list-style:none;display:grid;gap:6px;">
+          <li style="display:flex;gap:8px;align-items:flex-start;font-size:0.87em;color:#c0d8e8;"><span style="color:#22c55e;font-weight:800;flex-shrink:0;">🏋️</span> <span><strong style="color:var(--white);">Join a gym or strength class</strong> — 3 days a week. Improves cardiovascular endurance, strength, and discipline — all tested indirectly in Class 1 medical.</span></li>
+          <li style="display:flex;gap:8px;align-items:flex-start;font-size:0.87em;color:#c0d8e8;"><span style="color:#22c55e;font-weight:800;flex-shrink:0;">🏊</span> <span><strong style="color:var(--white);">Learn swimming or do laps</strong> — swimming is excellent for lung capacity, breath control, and calm under pressure. These directly map to pilot fitness standards.</span></li>
+          <li style="display:flex;gap:8px;align-items:flex-start;font-size:0.87em;color:#c0d8e8;"><span style="color:#22c55e;font-weight:800;flex-shrink:0;">🧘</span> <span><strong style="color:var(--white);">Yoga or meditation</strong> — 15 minutes daily. Pilots need mental resilience, steady blood pressure, and calm decision-making. Yoga builds exactly this. IndiGo and Air India both assess composure in selection.</span></li>
+          <li style="display:flex;gap:8px;align-items:flex-start;font-size:0.87em;color:#c0d8e8;"><span style="color:#22c55e;font-weight:800;flex-shrink:0;">👁️</span> <span><strong style="color:var(--white);">Protect your eyes and ears</strong> — reduce screen time at night, no loud earbuds, regular eye checkups. Vision and hearing are the #1 medical rejection reasons for pilots in India.</span></li>
+        </ul>
+        <div style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);border-radius:8px;padding:10px 14px;margin-top:14px;font-size:0.83em;color:#86efac;">
+          🏥 <strong>Your DGCA Class 1 Medical goal:</strong> Go into the exam with a healthy heart, clear eyes, good lung capacity, normal blood pressure, and a calm, composed mind. Start building all five — this summer.
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ======= HOMEWORK CHECKLIST ======= -->
@@ -1280,6 +1425,16 @@ footer a:hover { color: var(--sky); }
     <span class="icon-badge">📋</span>
     Your Research Homework — Assigned by Kushal Mama
   </div>
+
+  <!-- Research illustration image -->
+  <div style="margin:0 0 24px;border-radius:16px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,0.4);border:1px solid rgba(0,180,216,0.18);max-height:380px;">
+    <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/c475ff3f-1d8c-449a-b820-036246d1d1d7.png"
+      alt="Young Indian pilot student studying and researching CPL schools at his desk, aircraft visible outside window at sunset"
+      width="1060" height="380" loading="lazy"
+      style="width:100%;height:auto;display:block;object-fit:cover;max-height:380px;"
+      onerror="this.parentElement.style.display='none'"/>
+  </div>
+
   <div class="checklist-container">
     <div class="checklist-header">
       <h3>🎯 Complete all tasks below before choosing your route:</h3>
@@ -1290,14 +1445,6 @@ footer a:hover { color: var(--sky); }
         </div>
         <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
       </div>
-    </div>
-
-    <div class="check-item" onclick="toggleCheck(this)">
-      <div class="check-box">✓</div>
-      <div class="check-text">
-        Book a <strong>DGCA Class 1 Medical appointment</strong> — this is the MOST important first step. Your eyes, heart, and overall health determine if you can fly at all. Visit <a href="https://www.dgca.gov.in/digigov-portal/" target="_blank">dgca.gov.in</a> and find an approved medical examiner. Do this before spending any money on anything else!
-      </div>
-      <div class="check-priority priority-high">🔴 URGENT</div>
     </div>
 
     <div class="check-item" onclick="toggleCheck(this)">
@@ -1367,6 +1514,85 @@ footer a:hover { color: var(--sky); }
   </div><!-- /checklist -->
 
   <!-- ======= UNCLE'S LETTER ======= -->
+
+  <!-- ======= QUESTIONS FOR SCHOOLS ======= -->
+  <div class="section-title" style="margin-top:40px;">
+    <span class="icon-badge">❓</span>
+    Questions Mithil Should Ask Every School
+  </div>
+  <div style="background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius);padding:28px 30px;backdrop-filter:blur(8px);margin-bottom:16px;">
+    <p style="font-size:0.88em;color:var(--muted);margin-bottom:18px;">Whenever you call or visit a flying school — whether it's in India, South Africa, USA, or Europe — always ask these six questions. Write down the answers in your spreadsheet.</p>
+    <div style="display:grid;gap:10px;">
+      <div style="display:flex;gap:12px;align-items:flex-start;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.15);border-radius:10px;padding:13px 16px;">
+        <span style="color:var(--sky);font-size:1.3em;flex-shrink:0;">Q1</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;"><strong style="color:var(--white);">What is the current all-in fee, and what is not included?</strong></p>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.15);border-radius:10px;padding:13px 16px;">
+        <span style="color:var(--sky);font-size:1.3em;flex-shrink:0;">Q2</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;"><strong style="color:var(--white);">How many aircraft are active right now?</strong></p>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.15);border-radius:10px;padding:13px 16px;">
+        <span style="color:var(--sky);font-size:1.3em;flex-shrink:0;">Q3</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;"><strong style="color:var(--white);">What is the average course completion time?</strong></p>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.15);border-radius:10px;padding:13px 16px;">
+        <span style="color:var(--sky);font-size:1.3em;flex-shrink:0;">Q4</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;"><strong style="color:var(--white);">How many flying hours are included in writing?</strong></p>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.15);border-radius:10px;padding:13px 16px;">
+        <span style="color:var(--sky);font-size:1.3em;flex-shrink:0;">Q5</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;"><strong style="color:var(--white);">What medical class is expected before joining?</strong></p>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;background:rgba(0,180,216,0.06);border:1px solid rgba(0,180,216,0.15);border-radius:10px;padding:13px 16px;">
+        <span style="color:var(--sky);font-size:1.3em;flex-shrink:0;">Q6</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;"><strong style="color:var(--white);">What happens if training is delayed by weather or maintenance?</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Research Homework Sheet -->
+  <div class="section-title" style="margin-top:36px;">
+    <span class="icon-badge">📝</span>
+    Research Homework Sheet — Your Action List
+  </div>
+  <div style="background:var(--card-bg);border:1px solid rgba(244,162,40,0.25);border-radius:var(--radius);padding:28px 30px;backdrop-filter:blur(8px);margin-bottom:20px;">
+    <div style="display:grid;gap:10px;">
+      <div style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+        <span style="color:var(--gold);font-size:1.1em;flex-shrink:0;margin-top:1px;">☐</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;">List <strong style="color:var(--white);">5 cadet options</strong> and note eligibility, fee, and selection rounds.</p>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+        <span style="color:var(--gold);font-size:1.1em;flex-shrink:0;margin-top:1px;">☐</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;">List <strong style="color:var(--white);">8 India flying schools</strong> and mark whether they are DGCA approved.</p>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+        <span style="color:var(--gold);font-size:1.1em;flex-shrink:0;margin-top:1px;">☐</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;">List <strong style="color:var(--white);">5 foreign schools</strong> and note visa type, English test need, and DGCA conversion issue.</p>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+        <span style="color:var(--gold);font-size:1.1em;flex-shrink:0;margin-top:1px;">☐</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;">Compare <strong style="color:var(--white);">education loans</strong> from at least 3 banks.</p>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+        <span style="color:var(--gold);font-size:1.1em;flex-shrink:0;margin-top:1px;">☐</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;">Call or email <strong style="color:var(--white);">3 schools directly</strong> and ask for the latest brochure.</p>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;">
+        <span style="color:var(--gold);font-size:1.1em;flex-shrink:0;margin-top:1px;">☐</span>
+        <p style="font-size:0.9em;color:#c0d8e8;margin:0;">Create <strong style="color:var(--white);">one spreadsheet</strong> and update it weekly.</p>
+      </div>
+    </div>
+  </div>
+
+  
+    <div class="check-item" onclick="toggleCheck(this)">
+      <div class="check-box">✓</div>
+      <div class="check-text">
+        Book a <strong>DGCA Class 1 Medical appointment</strong> — your eyes, heart, and overall health determine if you can fly at all. Visit <a href="https://www.dgca.gov.in/digigov-portal/" target="_blank">dgca.gov.in</a> and find an approved medical examiner near Surat before you finalise any school or spend money on training.
+      </div>
+      <div class="check-priority" style="background:rgba(100,100,200,0.15);color:#a5b4fc;border:1px solid rgba(165,180,252,0.3);">📋 Plan Ahead</div>
+    </div>
+
   <div class="letter-section">
     <span class="letter-plane">✈️</span>
     <h2 class="letter-title">From Your Kushal Mama — To My Mithil</h2>
@@ -1375,7 +1601,7 @@ footer a:hover { color: var(--sky); }
       <br>
       <p>I want you to read this carefully, once. Then read it again whenever you feel low.</p>
       <br>
-      <p>Physics and chemistry papers didn't go well? <strong>So what.</strong> Every great pilot has a turbulent takeoff. The plane doesn't stay on the ground because of one bumpy runway — it climbs through the turbulence and reaches the sky. <span class="highlight">This setback in 12th is just turbulence. And you know what pilots are trained to do with turbulence? Fly through it.</span></p>
+      <p>Physics and chemistry papers didn't go well? <strong>So what.</strong> Every great pilot has a turbulent takeoff. The plane doesn't stay on the ground because of one bumpy runway — it climbs through the turbulence and reaches the sky.</p>
       <br>
       <p>I have seen the world of work, Mithil, and I'll tell you something that took me years to understand: <strong>the biggest barrier between where you are and where you want to be is not money, not marks, not competition.</strong> It is the belief that you belong there. That cockpit? It has your name on it — but only if you start acting like you belong there. Starting this summer.</p>
       <br>
@@ -1389,7 +1615,10 @@ footer a:hover { color: var(--sky); }
       <br>
       <p>I am proud of you. I believe in you. Now go make us both proud.</p>
     </div>
-    <div class="letter-sig">— Your Kushal Mama 💙</div>
+    <br>
+      <p>And Mithil — give me a call or message me anytime if you need anything. I am always here for you. 💙</p>
+      <br>
+      <div class="letter-sig">— Your Kushal Mama 💙</div>
     <div class="letter-hearts">✈️ 🌟 ✈️</div>
   </div>
 
@@ -1410,7 +1639,7 @@ function openTab(tabId, btn) {
 }
 
 // Smooth scroll
-function scrollTo(id) {
+function gotoSection(id) {
   const el = document.querySelector(id);
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
@@ -1422,18 +1651,14 @@ function toggleCheck(item) {
   updateProgress();
 }
 
+// In-memory checklist state (localStorage blocked in sandboxed contexts)
+let _checklistState = [];
 function saveChecklist() {
   const items = document.querySelectorAll('.check-item');
-  const state = Array.from(items).map(i => i.classList.contains('done'));
-  try { localStorage.setItem('mithil_checklist', JSON.stringify(state)); } catch(e) {}
+  _checklistState = Array.from(items).map(i => i.classList.contains('done'));
 }
-
 function loadChecklist() {
-  try {
-    const state = JSON.parse(localStorage.getItem('mithil_checklist') || '[]');
-    const items = document.querySelectorAll('.check-item');
-    state.forEach((done, i) => { if (done && items[i]) items[i].classList.add('done'); });
-  } catch(e) {}
+  // state is in-memory only; nothing to restore on fresh load
 }
 
 function updateProgress() {
